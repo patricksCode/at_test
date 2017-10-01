@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/submit-answer', 'HomeController@submitAnswer')->name('ajaxAnswer');
 
 Route::get('/graph-results', 'GraphController@index')->name('ajaxAnswer');
+
+Route::get('/chart-config.js', 'GraphController@graphJs')->name('chartConlfigJs');

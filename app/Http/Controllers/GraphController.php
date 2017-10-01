@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 use App\Models\UserQuestion;
+use Illuminate\View\View;
 
 class GraphController extends Controller
 {
@@ -15,6 +17,21 @@ class GraphController extends Controller
     }
 
     public function index()
+    {
+        $userQuestions = UserQuestion::all();
+        $questionIds = [];
+
+        foreach($userQuestions as $question){
+            if(!in_array($question->question_id, $questionIds)){
+                array_push($questionIds, $question->question_id);
+            }
+        }
+
+
+        return view('graph-results', ['chartData' => $questionIds]);
+    }
+
+    public function graphJs()
     {
 
         $chartData = [];
@@ -50,11 +67,8 @@ class GraphController extends Controller
 
         }
 
-
-        return view('graph-results',
-            [
-                'chartData' => $chartData,
-            ]
-        );
+        return response()
+            ->view('graph-js', ['chartData' => $chartData], 200)
+            ->header('Content-Type', 'application/javascript');
     }
 }
