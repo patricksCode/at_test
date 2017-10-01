@@ -54,7 +54,7 @@ class HomeController extends Controller
 
     /**
      *
-     * This method handles the post post requests to update the answers.
+     * This method handles the ajax post requests to update the answers.
      *
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse

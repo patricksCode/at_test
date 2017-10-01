@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 use App\Models\UserQuestion;
@@ -16,6 +15,12 @@ class GraphController extends Controller
         $this->middleware('auth');
     }
 
+    /**
+     *
+     * Displays Graphs for questions
+     *
+     * @return \Illuminate\Contracts\View\Factory|View
+     */
     public function index()
     {
         $userQuestions = UserQuestion::all();
@@ -31,6 +36,12 @@ class GraphController extends Controller
         return view('graph-results', ['chartData' => $questionIds]);
     }
 
+    /**
+     *
+     * Dynamically generates chart-config.js with all js vars to display graphs.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function graphJs()
     {
 
