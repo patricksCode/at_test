@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
 {
+
+    public function userQuestions()
+    {
+        return $this->hasMany('App\Model\UserQuestion');
+    }
     /*
      * this retrieves answers to the current question
      */
