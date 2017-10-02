@@ -23,4 +23,4 @@ Route::post('/submit-answer', 'HomeController@submitAnswer')->name('ajaxAnswer')
 
 Route::get('/graph-results', 'GraphController@index')->name('ajaxAnswer');
 
-Route::get('/chart-config.js', 'GraphController@graphJs')->name('chartConlfigJs');
+Route::get('/js/chart-config.js', 'GraphController@graphJs')->name('chartConlfigJs');

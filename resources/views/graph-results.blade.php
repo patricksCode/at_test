@@ -28,7 +28,7 @@
 
     <script type="text/javascript" src="{{ url('/js/chart_js_functions.js') }}"></script>
 
-    <script type="text/javascript" src="{{ url('/chart-config.js') }}"></script>
+    <script type="text/javascript" src="{{ url('/js/chart-config.js') }}"></script>
 
 @endsection
 

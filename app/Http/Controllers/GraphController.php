@@ -50,6 +50,9 @@ class GraphController extends Controller
 
         # generate chart array data
         foreach( $userQuestions as $userQuestion){
+            if(!$userQuestion->selected_answer){
+               continue;
+            }
             $date = new \DateTime($userQuestion->created_at);
             $dateString = $date->format('m-d-y');
             $question = $userQuestion->question()->first();
