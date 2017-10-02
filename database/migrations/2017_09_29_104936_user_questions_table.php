@@ -17,7 +17,7 @@ class UserQuestionsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('question_id');
-            $table->integer('selected_answer');
+            $table->integer('selected_answer')->nullable()->default(NULL);
             $table->index(['user_id', 'question_id', 'selected_answer']);
             $table->timestamps();
         });
