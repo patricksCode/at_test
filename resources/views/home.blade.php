@@ -37,7 +37,7 @@
                     </form>
                 </div>
                 <div class="panel-footer text-right">
-                    <a class="btn btn-primary resultsButton" href="/graph-results" role="button" disabled="true">See Results</a>
+                    <a class="btn btn-primary resultsButton hidden" href="/graph-results" role="button">See Results</a>
                 </div>
             </div>
         </div>

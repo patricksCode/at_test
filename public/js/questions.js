@@ -32,10 +32,10 @@ function checkAnswers(){
         if($(this).find(":radio").is(':checked')){
             $questionsAnswered++;
         }
-        console.log($questionsAnswered);
-        console.log($('.resultsButton'));
+        // console.log($questionsAnswered);
+        // console.log($('.resultsButton'));
         if($questionsAnswered >= 4) {
-            $('.resultsButton').prop('disabled', false);
+            $('.resultsButton').addClass('show');
         }
 
     });
