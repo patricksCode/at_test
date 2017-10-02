@@ -28,8 +28,9 @@ $( document ).ready(function() {
 });
 
 function checkAnswers(){
+    var $questionsAnswered = 0;
     $('.multipleChoiceAnswers').each(function(index){
-        var $questionsAnswered = 0;
+
         if($(this).find(":radio").is(':checked')){
             $questionsAnswered++;
         }
