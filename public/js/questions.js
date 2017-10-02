@@ -35,7 +35,7 @@ function checkAnswers(){
         // console.log($questionsAnswered);
         // console.log($('.resultsButton'));
         if($questionsAnswered >= 4) {
-            $('.resultsButton').addClass('show');
+            $('.resultsButton').removeClass('hidden');
         }
 
     });
