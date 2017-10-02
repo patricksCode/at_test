@@ -29,7 +29,7 @@ $( document ).ready(function() {
 
 function checkAnswers(){
     $('.multipleChoiceAnswers').each(function(index){
-        if($(this).is(':checked')){
+        if($(this).find(":radio").is(':checked')){
             $questionsAnswered++;
         }
         console.log($questionsAnswered);
