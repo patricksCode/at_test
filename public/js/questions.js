@@ -1,4 +1,4 @@
-var $questionsAnswered = 0;
+
 
 $( document ).ready(function() {
 
@@ -29,6 +29,7 @@ $( document ).ready(function() {
 
 function checkAnswers(){
     $('.multipleChoiceAnswers').each(function(index){
+        var $questionsAnswered = 0;
         if($(this).find(":radio").is(':checked')){
             $questionsAnswered++;
         }
