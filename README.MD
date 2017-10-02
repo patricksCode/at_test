@@ -14,11 +14,11 @@
 
 3. From here run all commands from root of local install of ao_test.
    
-4. Run composer install.
+4. Run 'composer install'.
 
-5. Run chmod -R 777 storage directory in repo.
+5. Run 'chmod -R 777 storage' directory in repo.
 
-6. Run php artisan migrate.
+6. Run 'php artisan migrate'.
 
 7. Run 'php artisan db:seed'.
 
