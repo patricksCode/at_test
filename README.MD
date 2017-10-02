@@ -12,17 +12,22 @@
     
 2. Create database in mysql called ao_test.
 
+
+
 3. From here run all commands from root of local install of ao_test.
+
+4. Run 'cp .env.example .env'.  Then add your local db configuration 
+to .env file.
    
-4. Run 'composer install'.
+5. Run 'composer install'.
 
-5. Run 'chmod -R 777 storage' directory in repo.
+6. Run 'chmod -R 777 storage' directory in repo.
 
-6. Run 'php artisan migrate'.
+7. Run 'php artisan migrate'.
 
-7. Run 'php artisan db:seed'.
+8. Run 'php artisan db:seed'.
 
-8. Navigate to site rom web browers and enjoy 
+9. Navigate to site rom web browers and enjoy 
 
 #Testing
 
