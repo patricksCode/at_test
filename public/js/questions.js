@@ -10,7 +10,7 @@ $( document ).ready(function() {
             answer: $(e.currentTarget).val()
         })
         .then(function (response) {
-            if(response.saved != "true"){
+            if(response.data.saved !== true){
                 console.log(response);
             }
             checkAnswers();
