@@ -15,7 +15,7 @@
                     <form id="questions">
                         @foreach($userQuestions as $questionNumber  => $userQuestion)
                             @php ($question = $userQuestion->question()->first())
-                            <div class="row form-group">
+                            <div class="row form-group multipleChoiceAnswers">
                                 <div class="col-md-12 col-xs-12"> {{ ($questionNumber+1) .". " .$question->text}}?</div>
                                 @foreach($question->answers()->orderBy('order')->get() as $answer)
                                         <div class="form-check col-md-11 col-xs-11 col-md-offset-1 col-xs-offset-1">
@@ -37,7 +37,7 @@
                     </form>
                 </div>
                 <div class="panel-footer text-right">
-                    <a class="btn btn-primary resultsButton" href="/graph-results" role="button">See Results</a>
+                    <a class="btn btn-primary resultsButton" href="/graph-results" role="button" disabled="true">See Results</a>
                 </div>
             </div>
         </div>

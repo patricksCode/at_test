@@ -1,3 +1,5 @@
+var $questionsAnswered = 0;
+
 $( document ).ready(function() {
 
 
@@ -11,9 +13,29 @@ $( document ).ready(function() {
             if(response.saved !== true){
                 console.log(response);
             }
+            checkAnswers();
         })
         .catch(function (error) {
             console.log(error);
         });
     });
+
+
+
+    checkAnswers();
+
+
 });
+
+function checkAnswers(){
+    $('.multipleChoiceAnswers').each(function(index){
+        if($(this).is(':checked')){
+            $questionsAnswered++;
+        }
+        if($questionsAnswered >= 4) {
+            $('.resultsButton').prop('disabled', false);
+        }
+
+    });
+
+}
