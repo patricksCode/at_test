@@ -32,6 +32,7 @@ function checkAnswers(){
         if($(this).is(':checked')){
             $questionsAnswered++;
         }
+        console.log($questionsAnswered);
         if($questionsAnswered >= 4) {
             $('.resultsButton').prop('disabled', false);
         }
